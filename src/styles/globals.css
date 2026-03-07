@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Colors matching mobile design system === */
+  --color-primary: #8B5CF6;
+  --color-primary-hover: #A78BFA;
+  --color-primary-dark: #6D28D9;
+
+  --color-accent: #D946EF;
+  --color-accent-hover: #E879F9;
+  --color-accent-dark: #A21CAF;
+
+  --color-background: #161623;
+  --color-panel: #2C2F48;
+  --color-panel-light: #3B3E5B;
+  --color-surface: #232338;
+  --color-border: #12121A;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0c0;
+  --color-text-muted: #64748b;
+
+  /* === Typography === */
+  --font-mono: "Space Mono", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* === Animations === */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-star-pulse: star-pulse 3s ease-in-out infinite;
+  --animate-star-drift: star-drift 20s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes star-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.5); }
+}
+
+@keyframes star-drift {
+  from { transform: translateY(0) translateX(0); }
+  to { transform: translateY(-100vh) translateX(20px); }
+}
+
+/* === Base Styles === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-panel-light);
+  border-radius: 3px;
+}
+
+/* === Utility Classes === */
+@layer utilities {
+  .glass-card {
+    background: rgba(44, 47, 72, 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+  }
+
+  .glass-card-strong {
+    background: rgba(44, 47, 72, 0.85);
+    backdrop-filter: blur(24px);
+    border: 2px solid rgba(139, 92, 246, 0.2);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 60px rgba(139, 92, 246, 0.1);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.3), 0 0 60px rgba(217, 70, 239, 0.1);
+  }
+
+  .glow-primary-strong {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 80px rgba(139, 92, 246, 0.2);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #8B5CF6, #D946EF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-gold {
+    background: linear-gradient(135deg, #FACC15, #F59E0B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(217, 70, 239, 0.15));
+  }
+
+  .gradient-border {
+    border-image: linear-gradient(135deg, #8B5CF6, #D946EF) 1;
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(217, 70, 239, 0.3);
+  }
+
+  .border-game {
+    border: 4px solid #12121A;
+    box-shadow: 4px 4px 0 0 black;
+  }
+}

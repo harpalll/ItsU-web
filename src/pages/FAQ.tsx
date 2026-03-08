@@ -12,7 +12,7 @@ const faqItems = [
   {
     question: "How do I start playing?",
     answer:
-      "Download the ItsU mobile app, create an account with JWT authentication, and you're ready to go. You can start a Practice game (free, against AI bots) to learn the mechanics, or stake 0.001 SOL to enter a real match.",
+      "Download the ItsU mobile app, create an account with JWT authentication, and you're ready to go. You can start a Practice game (free, against AI bots) to learn the mechanics, or stake 0.01 SOL to enter a real match.",
   },
   {
     question: "What are the game roles?",
@@ -32,7 +32,7 @@ const faqItems = [
   {
     question: "How does staking work?",
     answer:
-      "To enter a real match, you stake 0.001 SOL. The SOL is sent to the ItsU main wallet with a reference keypair for verification. When the game ends, a 2% protocol fee is deducted, and the remaining pot is split evenly among the winning team.",
+      "To enter a real match, you stake 0.01 SOL. The SOL is sent to the ItsU main wallet with a reference keypair for verification. When the game ends, a 2% protocol fee is deducted, and the remaining pot is split evenly among the winning team.",
   },
   {
     question: "What happens if I die in a game?",
@@ -52,7 +52,7 @@ const faqItems = [
   {
     question: "What blockchain does ItsU use?",
     answer:
-      "ItsU is built on Solana for fast transactions and low fees. The on-chain escrow vault is implemented as an Anchor program. The game is currently live on Solana Devnet.",
+      "ItsU is built on Solana for fast transactions and low fees. Payouts are processed securely on the backend. The game is currently live on Solana Devnet.",
   },
   {
     question: "How does matchmaking work?",

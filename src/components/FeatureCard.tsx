@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+import React from "react";
+
 interface FeatureCardProps {
-  icon: LucideIcon;
+  icon: LucideIcon | React.ElementType;
   title: string;
   description: string;
   iconColor?: string;

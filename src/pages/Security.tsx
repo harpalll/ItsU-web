@@ -40,10 +40,10 @@ export default function Security() {
           >
             <div className="flex items-center gap-3 mb-4">
               <Lock size={22} className="text-primary" />
-              <h2 className="text-lg font-black text-white uppercase">Escrow Vault Program</h2>
+              <h2 className="text-lg font-black text-white uppercase">Backend Payout Processing</h2>
             </div>
             <p className="text-sm text-text-secondary leading-relaxed mb-3">
-              ItsU uses an Anchor program deployed on Solana to manage the escrow vault.
+              ItsU uses a server-managed system to handle the game's reward pool.
               The staking flow works as follows:
             </p>
             <ol className="space-y-2 text-sm text-text-secondary">
@@ -145,10 +145,9 @@ export default function Security() {
               <h2 className="text-lg font-black text-white uppercase">Audits & Transparency</h2>
             </div>
             <p className="text-sm text-text-secondary leading-relaxed">
-              ItsU is fully open-source. The backend code, smart contracts, and mobile app are
+              ItsU is fully open-source. The backend code and mobile app are
               all publicly available for review on GitHub. We encourage community review and
-              welcome contributions to improve security. The Anchor program code is in the{" "}
-              <code className="text-primary bg-primary/10 px-1 rounded">anchor/programs</code> directory.
+              welcome contributions to improve security.
             </p>
           </motion.section>
         </div>

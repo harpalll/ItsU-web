@@ -26,7 +26,7 @@ const roadmapData: RoadmapItem[] = [
     items: [
       "AI bot engine powered by Groq (LLaMA 3.1)",
       "Bot chat, vote, and kill decision-making",
-      "Solana SOL staking with escrow vault",
+      "Solana SOL staking with server payouts",
       "Matchmaking worker with auto-fill bots",
       "Practice mode (no-risk games)",
     ],
@@ -40,6 +40,7 @@ const roadmapData: RoadmapItem[] = [
       "On-chain escrow vault via Anchor program",
       "Leaderboard & ranking system",
       "Game history & replay viewer",
+      "Premium wolf and custom avatars",
       "Marketing website launch",
     ],
     status: "in-progress",
@@ -52,7 +53,7 @@ const roadmapData: RoadmapItem[] = [
       "Tournament mode with larger prize pools",
       "Community governance features",
       "Mobile app store launch (iOS & Android)",
-      "Multi-chain support",
+      "Multi-currency support",
     ],
     status: "upcoming",
   },
@@ -68,7 +69,7 @@ export default function RoadmapTimeline() {
   return (
     <div className="relative">
       {/* Vertical line */}
-      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-panel-light" />
+      <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-primary via-accent to-panel-light" />
 
       <div className="space-y-12">
         {roadmapData.map((item, index) => {
@@ -82,9 +83,8 @@ export default function RoadmapTimeline() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`relative flex items-start gap-8 ${
-                isLeft ? "md:flex-row" : "md:flex-row-reverse"
-              } flex-row`}
+              className={`relative flex items-start gap-8 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                } flex-row`}
             >
               {/* Dot */}
               <div className="absolute left-4 md:left-1/2 w-3 h-3 -translate-x-1/2 mt-8 z-10">

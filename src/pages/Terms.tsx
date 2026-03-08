@@ -60,7 +60,7 @@ export default function Terms() {
               </p>
             </div>
             <ul className="space-y-1.5 text-sm text-text-secondary">
-              <li>• Each match requires a 0.001 SOL entry stake</li>
+              <li>• Each match requires a 0.01 SOL entry stake</li>
               <li>• If your character is killed or voted out, your staked SOL is permanently forfeited</li>
               <li>• Leaving an active game may result in loss of staked funds</li>
               <li>• A 2% protocol fee is deducted from the winning pot</li>

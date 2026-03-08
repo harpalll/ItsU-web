@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Skull, ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import StarField from "./StarField";
 
 export default function Hero() {
@@ -17,8 +17,8 @@ export default function Hero() {
           transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.2 }}
           className="inline-flex mb-8"
         >
-          <div className="w-24 h-24 rounded-3xl bg-primary flex items-center justify-center border-4 border-border shadow-[6px_6px_0_0_black] glow-primary-strong">
-            <Skull size={56} className="text-white" />
+          <div className="w-32 h-32 md:w-40 md:h-40 flex items-center justify-center rounded-2xl mt-8 glow-primary-strong">
+            <img src="/images/logo.png" alt="ItsU Logo" className="w-full h-full object-contain rounded-2xl drop-shadow-2xl" />
           </div>
         </motion.div>
 
@@ -58,11 +58,20 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center"
         >
+          <a
+            href="https://drive.google.com/file/d/10zf27PEuhJHg6-Svlg1ABYpeW9loPgV6/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-primary border-b-4 border-primary-dark text-white font-black uppercase tracking-wider text-lg hover:bg-primary-hover transition-all hover:translate-y-[-2px] glow-primary"
+          >
+            <Download size={24} />
+            Download APK (Devnet)
+          </a>
           <Link
             to="/game"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-primary border-b-4 border-primary-dark text-white font-black uppercase tracking-wider text-lg hover:bg-primary-hover transition-all hover:translate-y-[-2px] glow-primary"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-panel border-2 border-panel-light text-white font-black uppercase tracking-wider text-lg hover:bg-panel-light transition-all hover:translate-y-[-2px]"
           >
             How to Play
           </Link>

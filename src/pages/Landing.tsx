@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
   Bot,
-  Coins,
   Shield,
   Zap,
   Trophy,
@@ -16,6 +15,7 @@ import FeatureCard from "@/components/FeatureCard";
 import RoadmapTimeline from "@/components/RoadmapTimeline";
 import FAQAccordion from "@/components/FAQAccordion";
 import StarField from "@/components/StarField";
+import { SolanaIcon } from "@/components/SolanaIcon";
 
 const features = [
   {
@@ -27,10 +27,10 @@ const features = [
     iconBg: "bg-yellow-500/10",
   },
   {
-    icon: Coins,
+    icon: SolanaIcon,
     title: "SOL Staking",
     description:
-      "Every player stakes 0.001 SOL to enter a match. Staked funds are held in an escrow vault. Winners split the pot (minus a 2% protocol fee). High stakes drive real strategy.",
+      "Every player stakes 0.01 SOL to enter a match. Staked funds are held securely. Winners split the pot (minus a 2% protocol fee). High stakes drive real strategy.",
     iconColor: "#14F195",
     iconBg: "bg-green-500/10",
   },
@@ -38,7 +38,7 @@ const features = [
     icon: Shield,
     title: "On-Chain Security",
     description:
-      "Built on Solana with an Anchor escrow vault program. All staking transactions are verified on-chain with reference keypairs for server-side confirmation.",
+      "Built on Solana with server-side payout processing. All staking transactions are verified on-chain with reference keypairs for server-side confirmation.",
     iconColor: "#60A5FA",
     iconBg: "bg-blue-500/10",
   },
@@ -77,7 +77,7 @@ const faqItems = [
   {
     question: "How does staking work?",
     answer:
-      "Each player stakes 0.001 SOL to enter a match. The staked funds go into an escrow pot. When the game ends, a 2% protocol fee is deducted and the remaining pot is split evenly among the winning team (either Citizens or Killers).",
+      "Each player stakes 0.01 SOL to enter a match. The staked funds go into the match pot. When the game ends, a 2% protocol fee is deducted and the remaining pot is split evenly among the winning team (either Citizens or Killers).",
   },
   {
     question: "What are the roles?",
@@ -102,7 +102,7 @@ const faqItems = [
   {
     question: "What blockchain does ItsU use?",
     answer:
-      "ItsU is built on Solana for its fast transaction speeds and low fees. The escrow vault is implemented as an Anchor program on Solana. Currently live on Solana Devnet.",
+      "ItsU is built on Solana for its fast transaction speeds and low fees. The payouts are securely processed on our backend. Currently live on Solana Devnet.",
   },
   {
     question: "How does matchmaking work?",
@@ -194,7 +194,7 @@ export default function Landing() {
                       Entry Fee
                     </div>
                     <div className="text-lg font-black text-white">
-                      0.001 SOL
+                      0.01 SOL
                     </div>
                   </div>
                   <div className="bg-surface rounded-xl px-4 py-3 border border-border">
@@ -216,7 +216,7 @@ export default function Landing() {
 
               <div className="flex justify-center">
                 <div className="w-48 h-48 rounded-3xl bg-primary/10 border-4 border-border flex items-center justify-center shadow-[6px_6px_0_0_black]">
-                  <Coins size={80} className="text-primary" />
+                  <SolanaIcon size={80} className="text-primary" />
                 </div>
               </div>
             </div>
@@ -268,7 +268,7 @@ export default function Landing() {
 
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/HarmishTervadiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-panel border-2 border-border hover:border-primary/50 hover:bg-primary/10 transition-all font-bold uppercase tracking-wider text-sm"
@@ -277,7 +277,7 @@ export default function Landing() {
                 GitHub
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/HarmisTervadiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-panel border-2 border-border hover:border-accent/50 hover:bg-accent/10 transition-all font-bold uppercase tracking-wider text-sm"

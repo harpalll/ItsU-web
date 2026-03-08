@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Coins,
   Shield,
   ArrowLeft,
   AlertTriangle,
@@ -10,17 +9,18 @@ import {
   Lock,
 } from "lucide-react";
 import StarField from "@/components/StarField";
+import { SolanaIcon } from "@/components/SolanaIcon";
 
 const steps = [
   {
     step: "1",
     title: "Stake SOL to Enter",
     description:
-      "Every player stakes 0.001 SOL to join a match. A unique reference keypair is generated for server-side verification of your transaction.",
+      "Every player stakes 0.01 SOL to join a match. A unique reference keypair is generated for server-side verification of your transaction.",
   },
   {
     step: "2",
-    title: "Escrow Vault Holds Funds",
+    title: "Server Holds Funds",
     description:
       "Staked SOL is sent to the ItsU main wallet and recorded with a reference key. The backend verifies the on-chain transaction signature before allowing you to join the matchmaking queue.",
   },
@@ -60,14 +60,14 @@ export default function Staking() {
             SOL <span className="gradient-text">Staking</span>
           </h1>
           <p className="text-xl text-text-secondary">
-            How the entry fee, escrow, and payout system works in ItsU.
+            How the entry fee and payout system works in ItsU.
           </p>
         </motion.div>
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
           {[
-            { icon: Coins, label: "Entry Fee", value: "0.001 SOL", color: "#14F195" },
+            { icon: SolanaIcon, label: "Entry Fee", value: "0.01 SOL", color: "#14F195" },
             { icon: Percent, label: "Protocol Fee", value: "2%", color: "#D946EF" },
             { icon: Trophy, label: "Payout", value: "Even Split", color: "#FACC15" },
           ].map((stat, i) => (
@@ -137,7 +137,6 @@ export default function Staking() {
               "Each stake generates a unique reference Keypair for tracking",
               "Transaction intent is recorded in the database before the on-chain transfer",
               "The backend verifies the Solana transaction signature before joining the queue",
-              "The Anchor program manages the escrow vault on-chain",
               "All transactions are publicly visible on the Solana blockchain",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">

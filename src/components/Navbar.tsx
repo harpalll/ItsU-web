@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Skull } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Game", href: "/game" },
@@ -21,8 +21,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center border-2 border-border shadow-[2px_2px_0_0_black] group-hover:glow-primary transition-shadow">
-              <Skull size={20} className="text-white" />
+            <div className="w-9 h-9 flex items-center justify-center group-hover:glow-primary rounded-lg transition-shadow">
+              <img src="/images/logo.png" alt="ItsU Logo" className="w-full h-full object-contain rounded-lg" />
             </div>
             <span className="text-xl font-black uppercase tracking-wider font-mono">
               Its<span className="text-accent">U</span>
@@ -36,10 +36,9 @@ export default function Navbar() {
                 key={link.href}
                 to={link.href}
                 className={`px-4 py-2 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-200
-                  ${
-                    location.pathname === link.href
-                      ? "text-primary bg-primary/10"
-                      : "text-text-secondary hover:text-white hover:bg-white/5"
+                  ${location.pathname === link.href
+                    ? "text-primary bg-primary/10"
+                    : "text-text-secondary hover:text-white hover:bg-white/5"
                   }`}
               >
                 {link.label}
@@ -74,10 +73,9 @@ export default function Navbar() {
                   to={link.href}
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition-all
-                    ${
-                      location.pathname === link.href
-                        ? "text-primary bg-primary/10"
-                        : "text-text-secondary hover:text-white hover:bg-white/5"
+                    ${location.pathname === link.href
+                      ? "text-primary bg-primary/10"
+                      : "text-text-secondary hover:text-white hover:bg-white/5"
                     }`}
                 >
                   {link.label}

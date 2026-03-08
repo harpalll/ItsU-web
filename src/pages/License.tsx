@@ -31,7 +31,7 @@ export default function License() {
 
         <div className="glass-card rounded-2xl p-8">
           <pre className="text-sm text-text-secondary leading-relaxed whitespace-pre-wrap font-mono">
-{`MIT License
+            {`MIT License
 
 Copyright (c) ${new Date().getFullYear()} ItsU
 
@@ -63,11 +63,11 @@ SOFTWARE.`}
         >
           <h2 className="text-lg font-black text-white uppercase mb-3">Open Source</h2>
           <p className="text-sm text-text-secondary leading-relaxed">
-            ItsU is an open-source project. The frontend code, backend server, shared types,
-            and Anchor programs are all available under the MIT License. You are free to fork,
+            ItsU is an open-source project. The frontend code, backend server, and shared types
+            are all available under the MIT License. You are free to fork,
             modify, and deploy your own instance. See the{" "}
             <a
-              href="https://github.com"
+              href="https://github.com/HarmishTervadiya"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary-hover underline"

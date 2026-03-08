@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Skull, Github, Twitter } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 
 const footerLinks = {
   Game: [
@@ -24,8 +24,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center border-2 border-border shadow-[2px_2px_0_0_black]">
-                <Skull size={20} className="text-white" />
+              <div className="w-9 h-9 flex items-center justify-center">
+                <img src="/images/logo.png" alt="ItsU Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-xl font-black uppercase tracking-wider font-mono">
                 Its<span className="text-accent">U</span>
@@ -37,7 +37,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mt-6">
               <a
-                href="https://github.com"
+                href="https://github.com/HarmishTervadiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-panel border-2 border-border flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
@@ -45,7 +45,7 @@ export default function Footer() {
                 <Github size={18} className="text-text-secondary" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/HarmisTervadiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-panel border-2 border-border flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"

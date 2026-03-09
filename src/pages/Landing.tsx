@@ -6,9 +6,9 @@ import {
   Trophy,
   Gamepad2,
   Github,
-  Twitter,
   Users,
 } from "lucide-react";
+import { XIcon } from "@/components/XIcon";
 import Hero from "@/components/Hero";
 import GamePreview from "@/components/GamePreview";
 import FeatureCard from "@/components/FeatureCard";
@@ -282,8 +282,8 @@ export default function Landing() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-panel border-2 border-border hover:border-accent/50 hover:bg-accent/10 transition-all font-bold uppercase tracking-wider text-sm"
               >
-                <Twitter size={20} />
-                Twitter
+                <XIcon size={20} />
+                X
               </a>
             </div>
           </motion.div>

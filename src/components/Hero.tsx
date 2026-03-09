@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ChevronDown, Download } from "lucide-react";
+import { ChevronDown, Download, Play } from "lucide-react";
 import StarField from "./StarField";
 
 export default function Hero() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <StarField count={80} />
@@ -61,7 +64,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center"
         >
           <a
-            href="https://drive.google.com/file/d/10zf27PEuhJHg6-Svlg1ABYpeW9loPgV6/view?usp=drive_link"
+            href="https://drive.google.com/file/d/12ERfszYG8DodB8dMucEvmHWj4Ay9vbWv/view"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-primary border-b-4 border-primary-dark text-white font-black uppercase tracking-wider text-lg hover:bg-primary-hover transition-all hover:translate-y-[-2px] glow-primary"
@@ -81,6 +84,48 @@ export default function Hero() {
           >
             Learn About Staking
           </Link>
+        </motion.div>
+
+        {/* Video Integration */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
+          className="mt-16 w-full max-w-3xl mx-auto"
+        >
+          <div className="relative aspect-video rounded-3xl overflow-hidden border-2 border-panel-light/30 glow-primary-strong shadow-2xl group cursor-pointer">
+            {!isPlaying ? (
+              <div 
+                className="absolute inset-0 w-full h-full"
+                onClick={() => setIsPlaying(true)}
+              >
+                {/* High-res Thumbnail */}
+                <img 
+                  src="https://img.youtube.com/vi/8wM8ys7Fizs/maxresdefault.jpg" 
+                  alt="ItsU Game Trailer Thumbnail" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                
+                {/* Overlay with Play Button */}
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-colors group-hover:bg-black/30">
+                  <div className="w-20 h-20 flex items-center justify-center rounded-full bg-primary border-b-4 border-primary-dark text-white glow-primary transition-transform duration-300 group-hover:scale-110">
+                    <Play size={40} fill="currentColor" />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/8wM8ys7Fizs?autoplay=1&rel=0&modestbranding=1"
+                title="ItsU Game Trailer"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              ></iframe>
+            )}
+          </div>
         </motion.div>
 
         {/* Status badge */}

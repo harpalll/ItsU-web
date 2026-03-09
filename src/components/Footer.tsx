@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Github, Twitter } from "lucide-react";
+import { Github } from "lucide-react";
+import { XIcon } from "./XIcon";
 
 const footerLinks = {
   Game: [
@@ -24,8 +25,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 flex items-center justify-center">
-                <img src="/images/logo.png" alt="ItsU Logo" className="w-full h-full object-contain" />
+              <div className="w-9 h-9 flex items-center rounded-lg justify-center">
+                <img src="/images/logo.png" alt="ItsU Logo" className="w-full h-full object-contain rounded-lg" />
               </div>
               <span className="text-xl font-black uppercase tracking-wider font-mono">
                 Its<span className="text-accent">U</span>
@@ -50,7 +51,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-panel border-2 border-border flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
               >
-                <Twitter size={18} className="text-text-secondary" />
+                <XIcon size={18} className="text-text-secondary" />
               </a>
             </div>
           </div>
